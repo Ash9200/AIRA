@@ -1,5 +1,3 @@
-import os
-import io
 import uuid
 import pandas as pd
 import numpy as np
