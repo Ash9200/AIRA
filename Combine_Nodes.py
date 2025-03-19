@@ -4,10 +4,6 @@ import numpy as np
 from tqdm.notebook import tqdm
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
-from google.colab import drive
-
-# Mount Google Drive
-drive.mount('/content/drive')
 
 # Load the pre-trained BERT model for text embedding
 model = SentenceTransformer('all-MiniLM-L6-v2')
@@ -101,8 +97,8 @@ def simplify_graph(G, embeddings, similarity_threshold=0.95):
 
 def main():
     # File paths
-    input_graph_path = '/content/drive/MyDrive/Output/Knowledge_Graph.graphml'
-    output_graph_path = '/content/drive/MyDrive/Output/Processed_Knowledge_Graph.graphml'
+    input_graph_path = ''
+    output_graph_path = ''
 
     print("Loading graph...")
     G = load_graph(input_graph_path)
